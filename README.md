@@ -7,12 +7,16 @@ This code is heavily based on [dbaba's](https://github.com/dbaba) version of cod
 
 # How to do the modification
 
+## Solder a wire to the VPP pad on your sensor
+
+Follow the diagram on page 28 of SHARP's [Application Note](https://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0e02_03_appl_e.pdf).
+
 ## Change the #defines to your match your setup
-Open the code and go to the first lines to change the VPP pin and desired `new address data` for the sensor according to the following table:
+Open the code and go to the first lines to change the define of the VPP pin to the one you connected on your system, and the desired **Data** for the `NEW_ADRESS` define to be programmed into the sensor according to the following table:
 
 ### Possible NEW_ADDRESS data
 
-This instructions were also written by [dbaba on his repo](https://github.com/dbaba/gp2y0e03-address-programmer) so go ther to checkout more!
+This instructions were also written by [dbaba on his repo](https://github.com/dbaba/gp2y0e03-address-programmer) so go there to checkout more!
 
 Choose the `NEW_ADDRESS` on the  `Data` column value of the following table.
 
@@ -37,7 +41,7 @@ Choose the `NEW_ADDRESS` on the  `Data` column value of the following table.
 
 Please do NOT choose `0x08` as the corresponding Salve ID is the default value.
 
-Updating Slave ID to `0xF0` broke my sensors (I broke 3 sensors...). So I highly recommend you not to use the address `0xF0` (data for `0x0F`)
+Updating Slave ID to `0xF0` broke his sensors (He broke 3 sensors...). So he highly recommends you not to use the address `0xF0` (data for `0x0F`)
 
 **Flash the code and open the Serial Monitor on baudrate 115200 to see the process**
 
